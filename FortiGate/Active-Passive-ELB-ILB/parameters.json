@@ -1,0 +1,60 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "adminUsername": {
+            "value": "sofia-valles"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "fortiGateNamePrefix": {
+            "value": "fortigateNGFW2"
+        },
+        "fortiGateImageSKU": {
+            "value": "fortinet_fg-vm_payg_20190624"
+        },
+        "publicIPName": {
+            "value": "FG2ClusterPublicIP"
+        },
+        "publicIPResourceGroup": {
+            "value": "RG_Sofia.Valles"
+        },
+        "publicIP2Name": {
+            "value": "FG2PublicIP1"
+        },
+        "publicIP2ResourceGroup": {
+            "value": "RG_Sofia.Valles"
+        },
+        "publicIP3Name": {
+            "value": "FG2PublicIP2"
+        },
+        "publicIP3ResourceGroup": {
+            "value": "RG_Sofia.Valles"
+        },
+        "vnetName": {
+            "value": "FortigateProtectedVNet2"
+        },
+        "vnetResourceGroup": {
+            "value": "RG_Sofia.Valles"
+        },
+        "vnetAddressPrefix": {
+            "value": "10.3.0.0/16"
+        },
+        "subnet1Prefix": {
+            "value": "10.3.0.0/24"
+        },
+        "subnet2Prefix": {
+            "value": "10.3.1.0/24"
+        },
+        "subnet3Prefix": {
+            "value": "10.3.2.0/24"
+        },
+        "subnet4Prefix": {
+            "value": "10.3.3.0/24"
+        },
+        "subnet5Prefix": {
+            "value": "10.3.4.0/24"
+        }
+    }
+}
