@@ -320,6 +320,14 @@
                             "nextHopType": "VirtualAppliance",
                             "nextHopIPAddress": "[variables('sn2IPfga')]"
                         }
+                    },
+					{
+                        "name": "External-VNet1",
+                        "properties": {
+                            "addressPrefix": "10.6.0.0/16",
+                            "nextHopType": "VirtualAppliance",
+                            "nextHopIPAddress": "[variables('sn2IPfga')]"
+                        }
                     }
                 ]
             }
@@ -353,6 +361,14 @@
                         "name": "Default",
                         "properties": {
                             "addressPrefix": "0.0.0.0/0",
+                            "nextHopType": "VirtualAppliance",
+                            "nextHopIPAddress": "[variables('sn2IPfga')]"
+                        }
+                    },
+					{
+                        "name": "External-VNet1",
+                        "properties": {
+                            "addressPrefix": "10.6.0.0/16",
                             "nextHopType": "VirtualAppliance",
                             "nextHopIPAddress": "[variables('sn2IPfga')]"
                         }
@@ -421,20 +437,34 @@
             "properties": {
                 "securityRules": [
                     {
-                        "name": "AllowAllInbound",
+                        "name": "AllowAllInbound2",
                         "properties": {
                             "description": "Allow all in",
                             "protocol": "*",
                             "sourcePortRange": "*",
                             "destinationPortRange": "*",
-                            "sourceAddressPrefix": "*",
+                            "sourceAddressPrefix": "81.245.46.248",
                             "destinationAddressPrefix": "*",
                             "access": "Allow",
-                            "priority": 100,
+                            "priority": 130,
                             "direction": "Inbound"
                         }
                     },
                     {
+                        "name": "AllowAllInbound1",
+                        "properties": {
+                            "description": "Allow all in",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "*",
+                            "sourceAddressPrefix": "10.2.0.0/16",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 120,
+                            "direction": "Inbound"
+                        }
+                    },
+					{
                         "name": "AllowAllOutbound",
                         "properties": {
                             "description": "Allow all out",
@@ -527,10 +557,7 @@
                     }
                 ],
                 "enableIPForwarding": true,
-                "enableAcceleratedNetworking": "[variables('acceleratedNetworking')]",
-                "networkSecurityGroup": {
-                    "id": "[variables('NSGId')]"
-                }
+                "enableAcceleratedNetworking": "[variables('acceleratedNetworking')]"
             }
         },
         {
