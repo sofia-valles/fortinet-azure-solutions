@@ -55,6 +55,9 @@
         },
         "subnet5Prefix": {
             "value": "10.3.4.0/24"
+        },
+		"subnet6Prefix": {
+            "value": "10.3.5.0/24"
         }
     }
 }

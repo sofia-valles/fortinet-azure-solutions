@@ -282,7 +282,7 @@
         },
         "subnet6Prefix": {
             "type": "string",
-            "defaultValue": "172.16.137.0/24",
+            "defaultValue": "172.16.138.0/24",
             "metadata": {
                 "description": "Subnet 6 Prefix"
             }
