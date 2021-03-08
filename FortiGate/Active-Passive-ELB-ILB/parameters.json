@@ -32,6 +32,18 @@
         "publicIP3ResourceGroup": {
             "value": "RG_Sofia.Valles"
         },
+		"publicIP4Name": {
+            "value": "FG2PublicIP3"
+        },
+        "publicIP4ResourceGroup": {
+            "value": "RG_Sofia.Valles"
+        },
+		"publicIP5Name": {
+            "value": "FG2PublicIP4"
+        },
+        "publicIP5ResourceGroup": {
+            "value": "RG_Sofia.Valles"
+        },
         "vnetName": {
             "value": "FortigateProtectedVNet2"
         },
